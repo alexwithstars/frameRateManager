@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: #111;
+			color: #fff;
+			font-family: monospace;
+			font-size: 32px;
+		}
+	</style>
+	<title>Document</title>
+</head>
+<body>
+	<div id="f1"></div>
+	<div id="f2"></div>
+	<script type="module">
+		import { FrameRateManager } from './src/index.ts'
+		const $ = sel => document.querySelector(sel)
+		const manager = new FrameRateManager([
+			{ executor: () => {
+				$('#f1').innerHTML = manager.getFps('test')
+			}, fps: 60 },
+			{ name: 'test2', executor: () => {
+				$('#f2').innerHTML = manager.getFps('test2')
+			}, fps: 30 }
+		])
+		manager.start()
+	</script>
+</body>
+</html>

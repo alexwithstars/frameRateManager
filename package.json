@@ -1,0 +1,56 @@
+{
+  "name": "frame-rate-manager",
+  "version": "1.2.2",
+  "author": "alexwithstars",
+  "description": "A package to manage the frame rate of a canvas in js",
+  "keywords": [
+    "frame",
+    "rate",
+    "fps",
+    "js",
+    "canvas",
+    "manager"
+  ],
+  "files": [
+    "dist",
+    "types"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./types/types.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./types/*": {
+      "types": "./types/*"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "vite",
+    "pub": "tsc && npm publish",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "ts-standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexwithstars/frameRateManager.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexwithstars/frameRateManager/issues"
+  },
+  "homepage": "https://github.com/alexwithstars/frameRateManager#readme",
+  "eslintConfig": {
+    "extends": "./node_modules/ts-standard/eslintrc.json"
+  },
+  "devDependencies": {
+    "ts-standard": "12.0.2",
+    "typescript": "5.5.4",
+    "vite": "5.4.1"
+  }
+}
