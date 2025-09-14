@@ -51,13 +51,15 @@
     },
     "parserOptions": {
       "project": "./tsconfig.json",
-      "ignorePatterns": ["vite.config.ts"]
+      "ignorePatterns": [
+        "vite.config.ts"
+      ]
     },
     "extends": "./node_modules/ts-standard/eslintrc.json"
   },
   "devDependencies": {
     "ts-standard": "12.0.2",
-    "typescript": "5.5.4",
-    "vite": "5.4.1"
+    "typescript": "5.9.2",
+    "vite": "7.1.5"
   }
 }
