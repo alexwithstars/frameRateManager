@@ -1,6 +1,6 @@
 {
   "name": "frame-rate-manager",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "alexwithstars",
   "description": "A package to manage the frame rate of a canvas in js",
   "keywords": [
