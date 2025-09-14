@@ -46,6 +46,13 @@
   },
   "homepage": "https://github.com/alexwithstars/frameRateManager#readme",
   "eslintConfig": {
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off"
+    },
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "ignorePatterns": ["vite.config.ts"]
+    },
     "extends": "./node_modules/ts-standard/eslintrc.json"
   },
   "devDependencies": {

@@ -16,7 +16,7 @@ export class FrameRateManager {
   constructor (executors: ExecutorEntry[] = []) {
     this.#executors = {}
     for (const { name, executor, fps } of executors) {
-      if(!name) {
+      if (name === undefined) {
         throw new Error('Executor name is required')
       }
       this.#executors[name] = new Executor(executor, fps)
